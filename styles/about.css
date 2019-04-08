@@ -1,0 +1,128 @@
+/* CSS for about */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.nav-header {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+}
+
+.navigation {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    justify-content: center;
+    margin: 0;
+    padding: 10px 0;
+}
+
+.nav-header ul li {
+    display: block;
+    list-style-type: none;
+    padding: 10px 30px;
+}
+
+.title {
+    display: flex;
+    flex-direction: row;
+    flex: 100%;
+    align-content: center;
+    background-color: rgb(255, 255, 255);
+    font-size: 45px;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    justify-content: center;
+    letter-spacing: 0.15em;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    background-color:rgb(216, 253, 241);
+    justify-content: center;
+    padding-bottom: 70px; 
+}
+
+.bio {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(216, 253, 241);
+    padding-bottom: 40px;
+}
+
+.bio h2 {
+    text-shadow: 0px 3px 0px #f0f0f0,
+    0px 14px 10px rgba(0,0,0,0.15),
+    0px 24px 2px rgba(0,0,0,0.1),
+    0px 34px 30px rgba(0,0,0,0.1);
+    text-align: center;
+    font-style: italic;
+    font-family: 'Montserrat', sans-serif; 
+}
+
+.bio p {
+    padding-left: 230px; 
+    padding-right: 230px; 
+    text-align: justify;
+}
+  
+.bio img{
+    width: 200px;
+    height: 280px;
+    object-fit: cover;
+    box-shadow: 10px 15px 25px 0 rgba(0,0,0,.2);
+    display: block;
+    transition: all .5s cubic-bezier(0.645, 0.045, 0.355, 1);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* Link styles with hover */
+a {
+    color: black;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 0.15em;
+    
+    display: inline-block;
+    padding: 15px 20px;
+    position: relative;
+  }
+
+a:after {    
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: rgb(113, 204, 174);
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+}
+
+.nav-header ul li a:hover:after { 
+    width: 100%; 
+    left: 0; 
+}
+@media screen and (max-height: 300px) {
+    ul {
+          margin-top: 40px;
+    }
+}
+
+footer {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    border-top-style: solid;
+    border-width: 1px;
+    border-color: rgb(233, 232, 232);
+    border-spacing: 15px;
+    font-size: 12px;
+    color: rgb(182, 182, 182);
+}

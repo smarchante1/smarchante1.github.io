@@ -1,0 +1,143 @@
+/* CSS for blog */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.nav-header {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+}
+
+.navigation {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    justify-content: center;
+    margin: 0;
+    padding: 10px 0;
+}
+
+.nav-header ul li {
+    display: block;
+    list-style-type: none;
+    padding: 10px 30px;
+}
+
+.title {
+    display: flex;
+    flex-direction: row;
+    flex: 100%;
+    align-content: center;
+    background-color: rgb(255, 255, 255);
+    font-size: 45px;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    justify-content: center;
+    letter-spacing: 0.15em;
+}
+
+.blog-title {
+    font-size: 25px;
+    font-family: 'Montserrat', sans-serif;
+    border-bottom: solid;
+    border-width: 1px;
+}
+
+/* Blog Layout */
+
+.blog {
+    display: grid;
+    grid-template-columns: 
+      [full-start] minmax(1em, 1fr) 
+      [main-start] minmax(0, 56em) [main-end]
+      minmax(1em, 1fr) [full-end];
+    grid-gap: 1em;
+}
+
+.author {
+    margin: 0px 0px;
+}
+  
+p {
+    margin: 0px 0px; 
+    text-align: justify;
+}
+
+.post {
+    grid-column: main;
+}
+  
+figure {
+    grid-column: full;
+    text-align: center;
+}
+  
+section > * {
+    background-color: rgb(216, 253, 241);
+    padding: 2em;
+}
+  
+img {
+    max-width: 50%;
+}
+
+/* Link styles with hover */
+
+a {
+    color: black;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 0.15em;
+    
+    display: inline-block;
+    padding: 15px 20px;
+    position: relative;
+}
+
+a:after {    
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: rgb(113, 204, 174);
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+}
+
+.nav-header ul li a:hover:after { 
+    width: 100%; 
+    left: 0; 
+}
+@media screen and (max-height: 300px) {
+    ul {
+          margin-top: 40px;
+    }
+}
+
+a[href="#comments"] {
+    color: rgb(41, 182, 168);
+    text-decoration: none;
+}
+
+a[href="#comments"]:hover {
+    color: black;
+    text-decoration: none;
+}
+
+/* Footer */
+
+footer {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    border-top-style: solid;
+    border-width: 1px;
+    border-color: rgb(233, 232, 232);
+    border-spacing: 15px;
+    font-size: 12px;
+    color: rgb(182, 182, 182);
+}
