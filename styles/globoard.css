@@ -1,0 +1,185 @@
+/* CSS for Portfolio */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.nav-header {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+}
+
+.navigation {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    justify-content: center;
+    margin: 0;
+    padding: 10px 0;
+}
+
+.nav-header ul li {
+    display: block;
+    list-style-type: none;
+    padding: 10px 30px;
+}
+
+/* Link styles with hover */
+a {
+    color: black;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 0.15em;
+    
+    display: inline-block;
+    padding: 15px 20px;
+    position: relative;
+}
+
+a:after {    
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: rgb(113, 204, 174);
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+}
+
+.nav-header ul li a:hover:after { 
+    width: 100%; 
+    left: 0; 
+}
+
+@media screen and (max-height: 300px) {
+    ul {
+          margin-top: 40px;
+    }
+}
+
+.intro {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(216, 253, 241);
+    padding-bottom: 40px;
+}
+
+h1 {
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 0.15em;
+    background-color: rgb(255, 255, 255);
+    font-size: 45px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.intro h3 {
+    text-align: center;
+    font-size: 18px;
+}
+
+.intro a:hover {
+    color: rgb(100, 218, 178);
+}
+
+.intro p {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Nanum Gothic', sans-serif;
+    font-size: 25px;
+    text-align: center;
+    padding-bottom: 60px;
+}
+
+section.icons {
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    text-align: center;
+    padding: 25px;
+    font-size: 14px;
+}
+.main-image {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+section.icons a{
+    padding-left: 20px;
+    padding-right: 20px;
+}
+/* 
+section.icons a:hover{
+    color: aquamarine;
+} */
+
+footer {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    border-top-style: solid;
+    border-width: 1px;
+    border-color: rgb(233, 232, 232);
+    border-spacing: 15px;
+    font-size: 16px;
+    color: rgb(210, 210, 210);
+}
+
+.list-type2{
+    width:400px;
+    margin:0 auto;
+    }
+    
+    .list-type2 ol{
+    counter-reset: li;
+    list-style: none;
+    *list-style: decimal;
+    font-size: 15px;
+    font-family: 'Raleway', sans-serif;
+    padding: 0;
+    margin-bottom: 4em;
+    }
+    
+    .list-type2 ol ol{
+    margin: 0 0 0 2em;
+    }
+    
+    .list-type2 a{
+    position: relative;
+    display: block;
+    padding: .4em .4em .4em 2em;
+    *padding: .4em;
+    margin: .5em 0;
+    background: rgb(100, 218, 178);
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    transition: all .2s ease-in-out;
+    }
+    
+    .list-type2 a:hover{
+    background: #cb50ff;
+    text-decoration:none;
+    transform: scale(1.1);
+    }
+    
+    .list-type2 a:before{
+    content: counter(li);
+    counter-increment: li;
+    position: absolute;
+    left: -1.3em;
+    top: 50%;
+    margin-top: -1.3em;
+    background:rgb(100, 218, 178);
+    height: 2em;
+    width: 2em;
+    line-height: 2em;
+    border: .3em solid #fff;
+    text-align: center;
+    font-weight: bold;
+    color:#FFF;
+    }
+  
