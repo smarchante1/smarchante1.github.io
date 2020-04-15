@@ -140,6 +140,17 @@ div.desc {
     text-align: center;
 }
 
+div.design-desc {
+    padding: 15px;
+    text-align: center;
+}
+
+div.design-desc p {
+    padding: 15px;
+    text-align: center;
+    color: rgb(96, 96, 96);
+}
+
 footer {
     display: flex;
     justify-content: space-around;
